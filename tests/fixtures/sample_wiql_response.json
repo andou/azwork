@@ -1,0 +1,13 @@
+{
+  "queryType": "flat",
+  "queryResultType": "workItem",
+  "asOf": "2025-03-01T10:00:00Z",
+  "columns": [
+    {"referenceName": "System.Id", "name": "ID", "url": "https://dev.azure.com/myorg/_apis/wit/fields/System.Id"}
+  ],
+  "workItems": [
+    {"id": 1234, "url": "https://dev.azure.com/myorg/_apis/wit/workItems/1234"},
+    {"id": 1235, "url": "https://dev.azure.com/myorg/_apis/wit/workItems/1235"},
+    {"id": 1236, "url": "https://dev.azure.com/myorg/_apis/wit/workItems/1236"}
+  ]
+}

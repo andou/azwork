@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "azwork"
+version = "0.1.0"
+description = "TUI tool for triaging Azure DevOps work items"
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Antonio Pastorino"}]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Bug Tracking",
+]
+
+[project.urls]
+Homepage = "https://github.com/a-pastorino/azwork"
+Repository = "https://github.com/a-pastorino/azwork"
+dependencies = [
+    "textual>=0.47.0",
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "pyperclip>=1.8.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+]
+
+[project.scripts]
+azwork = "azwork.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["azwork*"]

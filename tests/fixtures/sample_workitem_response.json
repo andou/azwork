@@ -1,0 +1,75 @@
+{
+  "count": 2,
+  "value": [
+    {
+      "id": 1234,
+      "rev": 5,
+      "fields": {
+        "System.Id": 1234,
+        "System.Title": "Login fails with special chars",
+        "System.WorkItemType": "Bug",
+        "System.State": "Active",
+        "System.AreaPath": "MyProject\\Backend\\Auth",
+        "System.IterationPath": "MyProject\\Sprint 24.3",
+        "System.AssignedTo": {
+          "displayName": "Marco Rossi",
+          "uniqueName": "marco@example.com"
+        },
+        "System.CreatedDate": "2025-02-14T10:30:00Z",
+        "System.ChangedDate": "2025-02-16T15:45:00Z",
+        "System.Tags": "auth; security",
+        "Microsoft.VSTS.Common.Priority": 1,
+        "Microsoft.VSTS.Common.Severity": "2 - High",
+        "System.Description": "<p>When a user tries to login with a password containing characters like <b>&amp;</b> or <b>&lt;</b>, the authentication fails with a 500 error on <code>POST /api/auth/login</code></p>",
+        "Microsoft.VSTS.TCM.ReproSteps": "<ol><li>Go to /login</li><li>Enter user: test@example.com</li><li>Enter password containing &amp; character</li><li>Click Submit</li></ol>",
+        "Microsoft.VSTS.Common.AcceptanceCriteria": "<p>Login should succeed regardless of special characters in password.</p>",
+        "Custom.RootCause": "Input Sanitization",
+        "Custom.Environment": "Production"
+      },
+      "relations": [
+        {
+          "rel": "System.LinkTypes.Hierarchy-Reverse",
+          "url": "https://dev.azure.com/myorg/_apis/wit/workItems/1200",
+          "attributes": {
+            "name": "Parent"
+          }
+        }
+      ],
+      "_links": {
+        "html": {
+          "href": "https://dev.azure.com/myorg/MyProject/_workitems/edit/1234"
+        }
+      }
+    },
+    {
+      "id": 1235,
+      "rev": 2,
+      "fields": {
+        "System.Id": 1235,
+        "System.Title": "Dashboard timeout on large dataset",
+        "System.WorkItemType": "Bug",
+        "System.State": "Active",
+        "System.AreaPath": "MyProject\\Frontend",
+        "System.IterationPath": "MyProject\\Sprint 24.3",
+        "System.AssignedTo": {
+          "displayName": "Anna Bianchi",
+          "uniqueName": "anna@example.com"
+        },
+        "System.CreatedDate": "2025-02-10T08:00:00Z",
+        "System.ChangedDate": "2025-02-12T14:00:00Z",
+        "System.Tags": "performance",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.Common.Severity": "3 - Medium",
+        "System.Description": "<p>Dashboard page times out when dataset exceeds 10k rows.</p>",
+        "Microsoft.VSTS.TCM.ReproSteps": "",
+        "Microsoft.VSTS.Common.AcceptanceCriteria": ""
+      },
+      "relations": [],
+      "_links": {
+        "html": {
+          "href": "https://dev.azure.com/myorg/MyProject/_workitems/edit/1235"
+        }
+      }
+    }
+  ]
+}
