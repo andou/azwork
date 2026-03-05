@@ -35,7 +35,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/andou/azwork"
+Homepage = "https://andou.github.io/azwork"
+Documentation = "https://andou.github.io/azwork"
 Repository = "https://github.com/andou/azwork"
 
 [project.scripts]
