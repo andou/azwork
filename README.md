@@ -24,7 +24,7 @@ pip install azwork
 Or install from source:
 
 ```bash
-git clone https://github.com/a-pastorino/azwork.git
+git clone https://github.com/andou/azwork.git
 cd azwork
 pip install .
 ```

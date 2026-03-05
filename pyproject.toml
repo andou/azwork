@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=68.0", "setuptools-scm"]
+requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "azwork"
-version = "0.1.0"
+version = "0.1.1"
 description = "TUI tool for triaging Azure DevOps work items"
 requires-python = ">=3.10"
 readme = "README.md"
@@ -20,10 +20,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Topic :: Software Development :: Bug Tracking",
 ]
-
-[project.urls]
-Homepage = "https://github.com/a-pastorino/azwork"
-Repository = "https://github.com/a-pastorino/azwork"
 dependencies = [
     "textual>=0.47.0",
     "requests>=2.31.0",
@@ -37,6 +33,10 @@ dev = [
     "pytest>=7.0",
     "pytest-asyncio>=0.21",
 ]
+
+[project.urls]
+Homepage = "https://github.com/andou/azwork"
+Repository = "https://github.com/andou/azwork"
 
 [project.scripts]
 azwork = "azwork.__main__:main"
