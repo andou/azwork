@@ -75,6 +75,17 @@ work_item_types:
   - Bug
   - Task
   - User Story
+
+# Custom prompt template for Claude Code prompt export.
+# Use {work_item} as a placeholder for the work item Markdown.
+# If omitted, a default template is used.
+prompt_template: |
+  # Fix this
+
+  {work_item}
+
+  ## Rules
+  - Do not break existing tests
 ```
 
 All fields are optional when using CLI overrides.
@@ -98,6 +109,14 @@ work_item_types:
   - User Story
   - Feature
   - Epic
+prompt_template: |
+  # Resolve this work item
+
+  {work_item}
+
+  ## Instructions
+  - Follow the coding style in CLAUDE.md
+  - Write tests for any changes
 ```
 
 ### CLI overrides
