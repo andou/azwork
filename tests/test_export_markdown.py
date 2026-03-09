@@ -161,3 +161,15 @@ class TestWorkItemToPrompt:
         prompt, images = work_item_to_prompt(item, assets_prefix="./1234-assets")
         assert len(images) == 1
         assert "./1234-assets/" in prompt
+
+    def test_custom_prompt_template(self):
+        template = "## Custom\n\n{work_item}\n\n## Done"
+        prompt, _ = work_item_to_prompt(_make_item(), prompt_template=template)
+        assert prompt.startswith("## Custom")
+        assert "## Done" in prompt
+        assert "# [Bug] #1234" in prompt
+        assert "# Task: Resolve" not in prompt
+
+    def test_empty_template_uses_default(self):
+        prompt, _ = work_item_to_prompt(_make_item(), prompt_template="")
+        assert "# Task: Resolve the following work item" in prompt

@@ -206,7 +206,10 @@ class ExportDialog(ModalScreen[str | None]):
         if self.mode == "markdown":
             content, images = work_item_to_markdown(self.item, assets_prefix=assets_prefix)
         else:
-            content, images = work_item_to_prompt(self.item, assets_prefix=assets_prefix)
+            content, images = work_item_to_prompt(
+                self.item, assets_prefix=assets_prefix,
+                prompt_template=self.config.prompt_template,
+            )
 
         try:
             file_path.write_text(content, encoding="utf-8")

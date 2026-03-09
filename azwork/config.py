@@ -18,6 +18,7 @@ class Config:
     project: str = ""
     default_output_dir: str = "./bugs"
     work_item_types: list[str] = field(default_factory=lambda: ["Bug", "Task", "User Story"])
+    prompt_template: str = ""
     pat: str = ""
 
     @classmethod
@@ -34,6 +35,7 @@ class Config:
                 cfg.project = data.get("project", "")
                 cfg.default_output_dir = data.get("default_output_dir", "./bugs")
                 cfg.work_item_types = data.get("work_item_types", cfg.work_item_types)
+                cfg.prompt_template = data.get("prompt_template", "")
             except Exception:
                 pass
 
