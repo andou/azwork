@@ -6,6 +6,8 @@ A terminal UI for triaging Azure DevOps work items. Browse, inspect, and export 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![PyPI](https://img.shields.io/pypi/v/azwork)
 
+![azwork demo](demo.gif)
+
 ## Features
 
 - **Interactive TUI** — browse work items in a filterable, sortable table

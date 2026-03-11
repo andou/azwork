@@ -65,3 +65,13 @@ The list screen includes a filter bar at the top with:
 - **State** — filter by state (New, Active, Resolved, Closed, etc.)
 - **Iteration** — filter by iteration path
 - **Search** — free-text search across title and description
+
+## Demo mode
+
+Run azwork with fake data — useful for trying out the interface without an Azure DevOps connection:
+
+```bash
+azwork --demo
+```
+
+This loads 8 sample work items (bugs, tasks, user stories) with realistic titles, descriptions, and comments. No PAT or configuration is required.
