@@ -20,10 +20,10 @@ class AzworkApp(App):
     }
     """
 
-    def __init__(self, config: Config) -> None:
+    def __init__(self, config: Config, client: AzureDevOpsClient | None = None) -> None:
         super().__init__()
         self.config = config
-        self.client = AzureDevOpsClient(
+        self.client = client or AzureDevOpsClient(
             org=config.org,
             project=config.project,
             pat=config.pat,

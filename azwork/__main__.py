@@ -17,11 +17,21 @@ def main() -> None:
     parser.add_argument("--project", help="Azure DevOps project")
     parser.add_argument("--output-dir", help="Default output directory for exports")
     parser.add_argument("--setup", action="store_true", help="Run setup wizard")
+    parser.add_argument("--demo", action="store_true", help="Run with fake data (for screenshots/recordings)")
 
     args = parser.parse_args()
 
     if args.setup:
         _run_setup()
+        return
+
+    if args.demo:
+        from azwork.demo import DemoClient
+        from azwork.tui.app import AzworkApp
+
+        config = Config(org="acme-org", project="Acme", pat="demo")
+        app = AzworkApp(config, client=DemoClient())
+        app.run()
         return
 
     config = Config.load(
